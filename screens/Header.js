@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         fontSize: Dimensions.get('window').width / 15,
         fontWeight: 'bold',
         color: '#fff',
+        letterSpacing: 2,
     }
 })
 

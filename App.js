@@ -9,7 +9,7 @@ const App = () => {
     <View style={styles.app}>
 
        <Header />
-      {/* <Form /> */}
+      <Form />
       {/* <List /> */} 
   </View>
   )

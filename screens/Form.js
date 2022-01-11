@@ -1,15 +1,27 @@
 import React from 'react'
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View,Alert } from 'react-native'
-
+import { Button, StyleSheet, Text, TextInput, Dimensions,View,Alert } from 'react-native'
+import Icon from 'react-native-vector-icons/Ionicons'
 export default function Form() {
     const handle = () => {
         Alert.alert("Successfully Registered")
     }
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Learn</Text>
-                       <Text style={styles.text1}>Choose the part of the body</Text>
-
+            <Text style={styles.text}>Login</Text>
+            <TextInput style={styles.input} placeholder="Email" placeholderTextColor="#A39C9B" />
+            <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#A39C9B" />
+            <Text style={styles.forgot}>Forgot Password ?</Text>
+            <Button title="Login" style={styles.button} color="#A6279B" />
+            <View style={styles.social}>
+                <Icon name="md-logo-facebook" size={32} color="#A39C9B"/> 
+                <Icon name="md-logo-twitter" size={32} color="#A39C9B"/>
+                <Icon name="md-logo-google" size={32} color="#A39C9B"/>
+           </View>
+           
+            <View style={styles.footer}>
+                <Text style={styles.text2}>Don't have an account?</Text>
+                <Text style={styles.text3}>Sign Up</Text>
+            </View>
         </View>
     )
 }
@@ -20,18 +32,68 @@ const styles = StyleSheet.create({
        
     },
     text: {
-        fontSize: 40,
-        color: '#000',
+        fontSize: Dimensions.get('window').width / 15,
+        color: '#fff',
         fontWeight: 'bold',
-        fontFamily: "Roboto",
-        paddingBottom: "10%",
+        paddingBottom: "5%",
     }
     ,
-    text1: {
-        fontSize: 20,
-        color: '#000',
+    input: {
+        backgroundColor: '#272423',
+        width: "100%",
+        borderRadius: 5,
+        paddingHorizontal: "5%",
+        height: Dimensions.get('window').width / 10,
+        fontSize: Dimensions.get('window').width / 20,
+        color: '#A39C9B',
+        marginVertical: "5%",
+    }
+    ,
+    forgot: {
+        fontSize: Dimensions.get('window').width / 20,
+        color: '#A6279B',
+        textAlign: 'right',
+        paddingBottom: "15%",
+    },
+    button: {
+        width: "100%",
+        borderRadius: 8,
         fontWeight: 'bold',
-        fontFamily: "Roboto",
+        fontSize: Dimensions.get('window').width / 17,
+        color: '#fff',
+        
+
+    }
+    ,
+    social: {
+        
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        paddingVertical: "10%",
+        paddingHorizontal:"20%",
+    },
+    text2: {
+        fontSize: Dimensions.get('window').width / 25,
+        color: '#fff',
+        fontWeight: '300',
+        paddingBottom: "5%",
+        textAlign: 'center',
+    }
+    
+    ,
+    footer: {
+        alignItems: 'center',
+        flexDirection: 'row',
+    }
+    ,
+    text3: {
+          fontSize: Dimensions.get('window').width / 25,
+        color: '#fff',
+        fontWeight: '300',
+        paddingBottom: "5%",
+        textAlign: 'center',
+        paddingHorizontal: "2%",
+        color: '#A6279B',
     }
    
 })
