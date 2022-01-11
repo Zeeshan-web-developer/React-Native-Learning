@@ -4,13 +4,14 @@ import { View, Text,StyleSheet,SafeAreaView,Dimensions ,StatusBar, Animated,Flat
 import Header from './screens/Header'
 import Form from './screens/Form'
 import List from './screens/BodyList'
+import Users from './screens/Users'
 const App = () => {
   return (
     <View style={styles.app}>
-
-       <Header />
-      <Form />
-      {/* <List /> */} 
+<StatusBar backgroundColor="#fff" barStyle="light-content" />
+      <Users />
+       {/* <Header />
+      <Form /> */}
   </View>
   )
 }
@@ -19,7 +20,7 @@ export default App
 const styles = StyleSheet.create({
   app: {
     flex: 1,
-    backgroundColor: '#373230',
+    backgroundColor: '#Fff',
     
   }
  
