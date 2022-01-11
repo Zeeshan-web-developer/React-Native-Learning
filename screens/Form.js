@@ -1,15 +1,18 @@
 import React from 'react'
-import { Button, StyleSheet, Text, TextInput, Dimensions,View,Alert } from 'react-native'
+import { Button, StyleSheet, Text, TextInput,Keyboard ,Dimensions,View,Alert, TouchableWithoutFeedback } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 export default function Form() {
     const handle = () => {
         Alert.alert("Successfully Registered")
     }
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Login</Text>
-            <TextInput style={styles.input} placeholder="Email" placeholderTextColor="#A39C9B" />
-            <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#A39C9B" />
+        <TouchableWithoutFeedback onPress={()=>Keyboard.dismiss()}>
+            <View style={styles.container}>
+                <Text style={styles.text}>Login</Text>
+                <View>
+                     <TextInput style={styles.input} placeholder="Email" placeholderTextColor="#A39C9B" />
+                     <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#A39C9B" />
+                 </View>
             <Text style={styles.forgot}>Forgot Password ?</Text>
             <Button title="Login" style={styles.button} color="#A6279B" />
             <View style={styles.social}>
@@ -22,7 +25,8 @@ export default function Form() {
                 <Text style={styles.text2}>Don't have an account?</Text>
                 <Text style={styles.text3}>Sign Up</Text>
             </View>
-        </View>
+            </View>
+            </TouchableWithoutFeedback>
     )
 }
 
@@ -82,8 +86,8 @@ const styles = StyleSheet.create({
     
     ,
     footer: {
-        alignItems: 'center',
         flexDirection: 'row',
+        justifyContent: 'center',
     }
     ,
     text3: {
