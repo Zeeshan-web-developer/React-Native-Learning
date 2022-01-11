@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
+import React from 'react'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { View, Text,StyleSheet,SafeAreaView,Dimensions ,StatusBar, Animated,FlatList,Image, TouchableOpacity} from 'react-native'
+import Header from './screens/Header'
+import Form from './screens/Form'
+import List from './screens/BodyList'
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <View style={styles.app}>
+
+       <Header />
+      {/* <Form /> */}
+      {/* <List /> */} 
+  </View>
+  )
 }
 
+export default App
 const styles = StyleSheet.create({
-  container: {
+  app: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    backgroundColor: '#373230',
+    
+  }
+ 
+})
