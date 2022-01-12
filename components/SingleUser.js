@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Text, View,StyleSheet, Image,Dimensions} from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
 export class SingleUser extends Component {
     render() {
         return (
@@ -26,7 +25,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#Fff',
         padding: 10,
         borderRadius: 10,
-        elevation: 50,
+        elevation: 150,
         
     },
     image: {

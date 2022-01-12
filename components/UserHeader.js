@@ -5,7 +5,7 @@ export class UserHeader extends Component {
     render() {
         return (
             <View style={styles.header}>
-                <TextInput style={styles.input} placeholder="Email" placeholderTextColor="#A39C9B" />
+                <TextInput style={styles.input} placeholder="Search" placeholderTextColor="#A39C9B" />
                 <Icon name='search' size={32}/>
             </View>
         )
@@ -15,19 +15,16 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         width: '90%',
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F3EDF2',
         borderRadius: 10,
         paddingHorizontal: 10,
-        borderTopLeftRadius: 2,
-        borderTopRightRadius: 20,
-        borderBottomLeftRadius: 20,
+        
     },
     input: {
         flex: 1,
-        marginBottom: "5%",
-        paddingVertical: 5,
-
+        padding: 10,
     }
 })
 
